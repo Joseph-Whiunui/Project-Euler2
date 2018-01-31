@@ -11,11 +11,11 @@ namespace Project_Euler2
         static void Main(string[] args)
         {
             int probNum = 0;
-            Console.WriteLine("Enter a problem number from 7-7");
+            Console.WriteLine("Enter a problem number from 7-8");
             string input = Console.ReadLine();
-            while (!Int32.TryParse(input, out probNum) || probNum < 7 || probNum > 7)
+            while (!Int32.TryParse(input, out probNum) || probNum < 7 || probNum > 8)
             {
-                Console.WriteLine("Invalid input. Please enter a problem number in range 7-7");
+                Console.WriteLine("Invalid input. Please enter a problem number in range 7-8");
                 input = Console.ReadLine();
             }
             Selector(probNum);
@@ -30,6 +30,9 @@ namespace Project_Euler2
             {
                 case 7:
                     Console.WriteLine(Problem7.Workout());
+                    break;
+                case 8:
+                    Console.WriteLine(Problem8.Workout());
                     break;
                 default:
                     Console.WriteLine("Problem not solved");
